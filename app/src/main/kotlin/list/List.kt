@@ -10,10 +10,10 @@ class List<T>(var root: Node<T>? = null) {
         } else {
             while(aux != null) {
                 auxPrevious = aux
-                aux = aux?.next
+                aux = aux.next
             }
             aux = Node(value)
-            aux?.previous = auxPrevious
+            aux.previous = auxPrevious
             auxPrevious?.next = aux
         }
     }
@@ -24,10 +24,10 @@ class List<T>(var root: Node<T>? = null) {
 
         while(aux != null) {
             if(count == index) {
-                aux?.data = value
+                aux.data = value
                 break
             }
-            aux = aux?.next
+            aux = aux.next
             count += 1
         }
     }
@@ -39,11 +39,11 @@ class List<T>(var root: Node<T>? = null) {
 
          while(aux != null) {
              if(count == index) {
-                 auxPrevious?.next = aux?.next
+                 auxPrevious?.next = aux.next
                  break
              }
              auxPrevious = aux
-             aux = aux?.next
+             aux = aux.next
              count += 1
          }
      }
@@ -54,9 +54,9 @@ class List<T>(var root: Node<T>? = null) {
 
          while(aux != null) {
              if(count == index) {
-                 return aux?.data
+                 return aux.data
              }
-             aux = aux?.next
+             aux = aux.next
              count += 1
          }
 
@@ -68,13 +68,13 @@ class List<T>(var root: Node<T>? = null) {
          var count = 1
 
          while(aux != null) {
-             if(aux?.data == value) {
+             if(aux.data == value) {
                  return count
              }
-             aux = aux?.next
+             aux = aux.next
              count += 1
          }
-         
+
          return null
      }
 
@@ -83,13 +83,13 @@ class List<T>(var root: Node<T>? = null) {
          print("{")
 
          while(aux != null) {
-             print(aux?.data)
-             if(aux?.next != null) {
+             print(aux.data)
+             if(aux.next != null) {
                  print(", ")
              } else {
                  print("")
              }
-             aux = aux?.next
+             aux = aux.next
          }
 
          println("}")
